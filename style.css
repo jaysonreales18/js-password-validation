@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    font-family: 'Poppins', sans-serif;
+}
+
+.box{
+    position: relative;
+    width: 400px;
+    margin-bottom: 100px;
+    background-color: #f5f5f5;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    height: 445px;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.323);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.box .title{
+    font-size: 1.5rem;
+    text-align: center;
+    white-space: nowrap;
+    color: #121212;
+}
+
+.box .js{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    margin-bottom: 1rem;
+    color: #121212;
+}
+
+.box .inputBox {
+    position: relative;
+    width: 100%;
+    background: #f5f5f5b1;
+    border-radius: 8px;
+    padding: 5px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+.box .inputBox input {
+    position: relative;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 10px 5px;
+    border-radius: 8px;
+}
+
+.box .inputBox2 {
+    position: relative;
+    width: 100%;
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 5px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+    margin-top: 1rem;
+}
+
+.box .inputBox2 input {
+    position: relative;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 10px 5px;
+    border-radius: 8px;
+}
+
+.box .inputBox #toggleButton {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 34px;
+    height: 34px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box #error {
+    position: relative;
+    bottom: 10px;
+    padding: 0 10px;
+    border-radius: 3px;
+    color: #f5f5f5;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 440;
+    
+}
+
+.box .inputBox #toggleButton:hover {
+    color: #ff0844;
+    transition: 0.5s ease-in-out;
+    transform: scale(.95);
+}
+
+.box .inputBox #toggleButton::before{
+    content: '\f06e';
+    font-family: FontAwesome;
+}
+
+.box .inputBox #toggleButton.hide::before{
+    content: '\f070';
+    color: #ff0844;
+    transition: 0.5s ease-in-out;
+}
+
+.validation {
+    background: #5c6cfc;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 8px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+.validation ul {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.validation ul li {
+    position: relative;
+    list-style: none;
+    color: #f5f5f5;
+    font-size: 0.85rem;
+    transition: 0.5s;
+}
+
+.validation ul li.valid {
+    color: rgba(255, 255, 255, 0.693);;
+}
+
+.validation ul li::before {
+    content: "\f192";
+    width: 20px;
+    height: 10px;
+    font-family: FontAwesome;
+    display: inline-flex;
+}
+
+.validation ul li.valid::before {
+    content: "\f00c";
+    color: #00de7a;
+}
+
+.box #submit {
+    background:#495aff;
+    color: #f5f5f5;
+    padding: 10px 25px;
+    outline: none;
+    border: none;
+    margin-top: 15px;
+    border-radius: 5px;
+    position: absolute;
+    right: 16px;
+    left: 16px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.5s;
+    opacity: .5;
+    letter-spacing: 0.1rem;
+    font-weight: 450;
+}
