@@ -114,8 +114,8 @@ function confirmPassword(data){
         errorMessage.innerHTML = "Password matched";
         errorMessage.style.backgroundColor = "#00de7a";
         errorMessage.style.opacity = "100%";
-        //const box = document.getElementById("box");
-        //box.style.height = "420px";
+        const box = document.getElementById("box");
+        box.style.height = "415px";
         
     } else {
         document.getElementById("submit").style.opacity = .5;
