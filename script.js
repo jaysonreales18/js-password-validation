@@ -116,12 +116,14 @@ function confirmPassword(data){
         errorMessage.style.opacity = "100%";
         const box = document.getElementById("box");
         box.style.height = "465px";
+        document.getElementById("submit").style.cursor="pointer";
         
     } else {
         document.getElementById("submit").style.opacity = .5;
         document.getElementById("submit").disabled = true;
         errorMessage.innerHTML = "Password doesn't matched";
         errorMessage.style.backgroundColor = "#ff0844";
+        document.getElementById("submit").style.cursor="not-allowed";
     }
 }
 
